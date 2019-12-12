@@ -1,0 +1,25 @@
+name: Check and update
+on:
+  schedule:
+    # every 6 hours
+    - cron: '* */6 * * *'
+jobs:
+
+  check-and-update:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - shell: bash
+      run: |
+        npm install puppeteer
+        node check.js >> ${{ github.workspace }}/site/_config.yml
+
+    - name: Build and Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BASE_BRANCH: master # The branch the action should deploy from.
+        BRANCH: gh-pages # The branch the action should deploy to.
+        FOLDER: site # The folder the action should deploy.

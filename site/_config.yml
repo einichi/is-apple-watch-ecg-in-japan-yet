@@ -1,0 +1,8 @@
+source: .
+destination: ./_site
+data_dir: _data
+includes_dir: _includes
+liquid:
+  error_mode: strict
+  strict_filters: true
+  strict_variables: true
