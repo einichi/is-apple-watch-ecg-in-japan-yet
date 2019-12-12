@@ -3,6 +3,8 @@ on:
   schedule:
     # every 6 hours
     - cron: '* */6 * * *'
+  push:
+    branches-ignore: gh-pages
 jobs:
 
   check-and-update:
