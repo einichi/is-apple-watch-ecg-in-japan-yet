@@ -16,7 +16,7 @@ jobs:
     - shell: bash
       run: |
         npm install puppeteer
-        node check.js >> ${{ github.workspace }}/site/_config.yml
+        sed -i 's/present:.*/present: `node check.js`/' site/_config.yml
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
