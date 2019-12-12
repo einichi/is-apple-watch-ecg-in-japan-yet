@@ -16,7 +16,7 @@ const puppeteer = require('puppeteer');
         return "NO";
     });
 
-    console.log("present: ", present);
+    console.log("present:", present);
 
     await browser.close();
 })();

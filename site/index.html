@@ -18,7 +18,7 @@ title_jp: Apple Watchの心電図機能は日本で利用可能になりまし�
 				{{ page.title }}
 				<small class="text-muted">{{ page.title_jp }}</small>
 			</h3>
-			<h1 id="present">{% if site.present %}{% site.present %}{% else %}NO{% endif %}</h1>
+			<h1 id="present">{% if site.present != nil %}{% site.present %}{% else %}NO{% endif %}</h1>
 		</main>
 
 		<script src="assets/js/jquery-3.3.1.slim.min.js"></script>
