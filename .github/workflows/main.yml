@@ -16,8 +16,7 @@ jobs:
     - shell: bash
       run: |
         npm install puppeteer
-        PRESENT=`node check.js`
-        sed -i 's/present:.*/present: $PRESENT/' site/_config.yml
+        PRESENT=`node check.js` && sed -i "s/present:.*/${PRESENT}/" site/_config.yml
 
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
