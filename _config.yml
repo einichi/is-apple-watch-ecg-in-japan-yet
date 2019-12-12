@@ -6,4 +6,4 @@ liquid:
   error_mode: strict
   strict_filters: true
   strict_variables: true
-present:  NO
+present: NO
