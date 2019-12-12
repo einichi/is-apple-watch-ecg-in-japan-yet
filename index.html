@@ -1,6 +1,8 @@
 ---
 title: Is the ECG feature for Apple Watch in Japan yet?
 title_jp: Apple Watchの心電図機能は日本で利用可能になりましたか？
+github: https://github.com/einichi/is-apple-watch-ecg-in-japan-yet
+hp: https://ricky.burg.in
 ---
 <!doctype html>
 <html lang="en">
@@ -12,13 +14,17 @@ title_jp: Apple Watchの心電図機能は日本で利用可能になりまし�
 
 		<title>{{ page.title }}</title>
 	</head>
-	<body>
-		<main role="main" class="container">
+	<body class="d-flex flex-column" style="min-height: 100vh">
+		<main role="main" class="flex-fill">
 			<h1 class="mt-5 text-center">{{ page.title }}</h1>
 			<h5 class="text-muted text-center">{{ page.title_jp }}</h5>
 			<p class="text-center font-weight-bold text-uppercase" style="font-size:180px" id="present">{{ site.present }}</p>
 		</main>
-
+		<footer>
+			<div class="container">
+				<span class="text-muted">Quickly cobbled together by <a href="{{ page.hp }}">Ricky Burgin</a>. Code available at <a href="{{ page.github }}">GitHub</a>.</span>
+			</div>
+		</footer>
 		<script src="assets/js/jquery-3.3.1.slim.min.js"></script>
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 	</body>
