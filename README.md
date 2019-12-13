@@ -1,6 +1,6 @@
 # Is the Apple Watch ECG feature available in Japan yet?
 
-To find out, go here: https://einichi.github.io/is-apple-watch-ecg-in-japan-yet
+To find out, go here: https://is-apple-watch-ecg-in-japan-yet.tru.io/
 
 Uses Puppeteer to check https://www.apple.com/watchos/feature-availability and see if Japan is listed under the ECG section.
 
